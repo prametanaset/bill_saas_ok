@@ -1,0 +1,4 @@
+Multi-Tenant: DB Name Update Query -> UPDATE db_store SET database_name = 'bill_xml_st0007' WHERE id = 7
+Success: Yes | Affected Rows: 1
+Multi-Tenant: DB Name Update Query -> UPDATE db_store SET database_name = 'bill_xml_st0008' WHERE id = 8
+Success: Yes | Affected Rows: 1

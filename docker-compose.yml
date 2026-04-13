@@ -1,0 +1,80 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bill_saas_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      CI_ENV: development
+      DB_HOSTNAME: db
+      DB_USERNAME: ${DB_USERNAME:-bill_user}
+      DB_PASSWORD: ${DB_PASSWORD:-bill_pass}
+      DB_DATABASE: bill_xml
+    volumes:
+      - ./uploads:/var/www/html/uploads
+      - ./tmp:/var/www/html/tmp
+      - ./application/logs:/var/www/html/application/logs
+      - ./theme:/var/www/html/theme
+      - ./application/controllers:/var/www/html/application/controllers
+      - ./application/models:/var/www/html/application/models
+      - ./application/views:/var/www/html/application/views
+      - ./application/helpers:/var/www/html/application/helpers
+      - ./application/libraries:/var/www/html/application/libraries
+      - ./application/language:/var/www/html/application/language
+      - ./application/config:/var/www/html/application/config
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bill_network
+
+  db:
+    image: mysql:8.0
+    container_name: bill_saas_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: bill_xml
+      MYSQL_USER: ${DB_USERNAME:-bill_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-bill_pass}
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-rootpassword}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - bill_network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: bill_saas_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bill_network
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  bill_network:
+    driver: bridge

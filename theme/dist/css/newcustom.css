@@ -1,0 +1,362 @@
+/* ============================================
+   SIDEBAR — Refined Dark Premium
+   Minimal, modern, no animations
+   ============================================ */
+
+/* Kill menu item transitions (keep sidebar toggle animation) */
+.sidebar-menu > li,
+.sidebar-menu > li > a,
+.sidebar-menu .treeview-menu,
+.sidebar-menu .treeview-menu > li > a,
+.control-sidebar,
+.control-sidebar-bg {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+/* Smooth sidebar toggle animation */
+.main-sidebar,
+.left-side {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out !important;
+    -o-transition: transform 0.3s ease-in-out, width 0.3s ease-in-out !important;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out !important;
+}
+.content-wrapper,
+.right-side,
+.main-footer {
+    -webkit-transition: margin-left 0.3s ease-in-out !important;
+    -o-transition: margin-left 0.3s ease-in-out !important;
+    transition: margin-left 0.3s ease-in-out !important;
+}
+.main-header .navbar {
+    -webkit-transition: margin-left 0.3s ease-in-out !important;
+    -o-transition: margin-left 0.3s ease-in-out !important;
+    transition: margin-left 0.3s ease-in-out !important;
+}
+.main-header .logo {
+    -webkit-transition: width 0.3s ease-in-out !important;
+    -o-transition: width 0.3s ease-in-out !important;
+    transition: width 0.3s ease-in-out !important;
+}
+
+/* ——— SIDEBAR BODY ——— */
+.skin-blue .main-sidebar,
+.skin-blue .left-side,
+.skin-blue-light .main-sidebar,
+.skin-blue-light .left-side {
+    background: #0c1222 !important;
+}
+/* Wrapper must NOT be dark — only the sidebar itself */
+.skin-blue .wrapper,
+.skin-blue-light .wrapper {
+    background: #f8fafc !important;
+}
+
+/* ——— LOGO / BRAND BAR ——— */
+.skin-blue .main-header .logo,
+.skin-blue-light .main-header .logo {
+    background: rgba(255,255,255,0.04) !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.03em !important;
+    height: 50px !important;
+    line-height: 50px !important;
+}
+.skin-blue .main-header .logo:hover,
+.skin-blue-light .main-header .logo:hover {
+    background: rgba(255,255,255,0.06) !important;
+}
+
+/* ——— USER PANEL ——— */
+.sidebar .user-panel {
+    padding: 18px 16px 14px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+    margin-bottom: 8px !important;
+}
+.sidebar .user-panel .pull-left.image img {
+    max-width: 38px !important;
+    max-height: 38px !important;
+    border: 2px solid rgba(255,255,255,0.15) !important;
+    border-radius: 10px !important;
+}
+.user-panel > .info {
+    padding: 8px 5px 5px 15px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    left: 52px !important;
+}
+.user-panel > .info,
+.user-panel > .info > a,
+.skin-blue .user-panel > .info,
+.skin-blue .user-panel > .info > a,
+.skin-blue-light .user-panel > .info,
+.skin-blue-light .user-panel > .info > a {
+    color: #e2e8f0 !important;
+}
+/* Hide "Online" status */
+.user-panel > .info > a {
+    display: none !important;
+}
+.user-panel > .info > p {
+    color: #e2e8f0 !important;
+    font-size: 13px !important;
+    margin: 0 !important;
+}
+
+/* ——— ALL SIDEBAR LINKS — BASE ——— */
+.skin-blue .sidebar a,
+.skin-blue-light .sidebar a {
+    color: #7a869a !important;
+}
+.sidebar a:hover {
+    text-decoration: none !important;
+}
+
+/* Override text-aqua icons inside sidebar */
+.main-sidebar .text-aqua,
+.main-sidebar .text-yellow {
+    color: inherit !important;
+}
+
+/* ——— TOP-LEVEL MENU ITEMS ——— */
+.skin-blue .sidebar-menu > li > a,
+.skin-blue-light .sidebar-menu > li > a {
+    color: #7a869a !important;
+    border-left: 3px solid transparent !important;
+    border-radius: 0 !important;
+    margin: 1px 10px 1px 0 !important;
+    padding: 10px 14px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    border-radius: 0 6px 6px 0 !important;
+}
+
+/* Icons */
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > .ion {
+    color: #4e5d73 !important;
+    width: 22px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    margin-right: 8px !important;
+}
+
+/* Hover */
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue-light .sidebar-menu > li:hover > a {
+    color: #c8d1dc !important;
+    background: rgba(255,255,255,0.04) !important;
+    border-left-color: transparent !important;
+    border-radius: 0 6px 6px 0 !important;
+    margin-right: 10px !important;
+}
+.sidebar-menu > li:hover > a > .fa,
+.sidebar-menu > li:hover > a > .glyphicon,
+.sidebar-menu > li:hover > a > .ion {
+    color: #8899ad !important;
+}
+
+/* Active */
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue-light .sidebar-menu > li.active > a {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.06) 100%) !important;
+    border-left-color: #3b82f6 !important;
+    border-radius: 0 6px 6px 0 !important;
+    margin-right: 10px !important;
+    font-weight: 600 !important;
+}
+.sidebar-menu > li.active > a > .fa,
+.sidebar-menu > li.active > a > .glyphicon,
+.sidebar-menu > li.active > a > .ion {
+    color: #60a5fa !important;
+}
+.skin-blue .sidebar-menu > li.active,
+.skin-blue-light .sidebar-menu > li.active {
+    border-left-color: transparent !important;
+}
+
+/* Treeview arrow chevron */
+.sidebar-menu > li > a > .pull-right-container {
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    margin-top: -7px !important;
+}
+.sidebar-menu > li > a > .pull-right-container > .fa-angle-left,
+.sidebar-menu > li > a > span > .pull-right-container > .fa-angle-left {
+    color: #3d4f63 !important;
+    font-size: 14px !important;
+}
+.sidebar-menu > li.active > a > .pull-right-container > .fa-angle-left {
+    color: #60a5fa !important;
+}
+
+/* ——— TREEVIEW SUBMENU ——— */
+.skin-blue .sidebar-menu > li > .treeview-menu,
+.skin-blue-light .sidebar-menu > li > .treeview-menu {
+    background: rgba(0,0,0,0.2) !important;
+    padding: 6px 0 !important;
+    margin: 0 10px 0 0 !important;
+    border-radius: 0 0 6px 0 !important;
+    border-left: 3px solid rgba(59,130,246,0.15) !important;
+}
+
+/* Submenu items */
+.skin-blue .treeview-menu > li > a,
+.skin-blue-light .treeview-menu > li > a {
+    color: #64748b !important;
+    padding: 7px 14px 7px 46px !important;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    border-radius: 0 4px 4px 0 !important;
+    margin-right: 10px !important;
+}
+.skin-blue .treeview-menu > li > a:hover,
+.skin-blue-light .treeview-menu > li > a:hover {
+    color: #cbd5e1 !important;
+    background: rgba(255,255,255,0.03) !important;
+}
+.skin-blue .treeview-menu > li.active > a,
+.skin-blue .treeview-menu > li.active > a:hover,
+.skin-blue-light .treeview-menu > li.active > a,
+.skin-blue-light .treeview-menu > li.active > a:hover {
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+    background: rgba(59,130,246,0.08) !important;
+}
+
+/* Submenu icons */
+.treeview-menu > li > a > .fa,
+.treeview-menu > li > a > .glyphicon {
+    color: inherit !important;
+    width: 18px !important;
+    font-size: 12px !important;
+    margin-right: 6px !important;
+    opacity: 0.6 !important;
+}
+
+/* ——— SECTION HEADERS ——— */
+.sidebar-menu > li.header {
+    color: #3d4f63 !important;
+    background: transparent !important;
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 20px 16px 6px !important;
+    font-weight: 700 !important;
+}
+
+/* ——— CONTENT & FOOTER BORDER ——— */
+.content-wrapper,
+.right-side {
+    min-height: 100vh !important;
+    background-color: #f8fafc !important;
+    z-index: 800 !important;
+}
+.skin-blue .content-wrapper,
+.skin-blue .main-footer,
+.skin-blue-light .content-wrapper,
+.skin-blue-light .main-footer {
+    border-left: 1px solid #e2e8f0 !important;
+}
+
+/* ——— NAVBAR (top bar) ——— */
+.skin-blue .main-header .navbar,
+.skin-blue-light .main-header .navbar {
+    background-color: #0c1222 !important;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.06) !important;
+}
+.main-header .navbar {
+    margin-left: 230px;
+}
+@media (min-width: 768px) {
+    .sidebar-collapse .main-header .navbar {
+        margin-left: 50px !important;
+    }
+    .sidebar-collapse .main-header .logo {
+        width: 50px !important;
+    }
+    .sidebar-collapse .content-wrapper {
+        margin-left: 50px !important;
+    }
+}
+.skin-blue .main-header .navbar .sidebar-toggle,
+.skin-blue-light .main-header .navbar .sidebar-toggle {
+    color: #ffffff !important;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover,
+.skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+    color: #ffffff !important;
+    background-color: rgba(255,255,255,0.1) !important;
+}
+.skin-blue .main-header .navbar .nav > li > a,
+.skin-blue-light .main-header .navbar .nav > li > a {
+    color: #e2e8f0 !important;
+}
+.skin-blue .main-header .navbar .nav > li > a:hover,
+.skin-blue .main-header .navbar .nav > li > a:active,
+.skin-blue .main-header .navbar .nav > li > a:focus,
+.skin-blue .main-header .navbar .nav .open > a,
+.skin-blue-light .main-header .navbar .nav > li > a:hover,
+.skin-blue-light .main-header .navbar .nav > li > a:active,
+.skin-blue-light .main-header .navbar .nav > li > a:focus,
+.skin-blue-light .main-header .navbar .nav .open > a {
+    background: rgba(255,255,255,0.1) !important;
+    color: #ffffff !important;
+}
+.skin-blue .main-header li.user-header,
+.skin-blue-light .main-header li.user-header {
+    background-color: #ffffff !important;
+}
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header > p {
+    color: #334155 !important;
+}
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* ——— SCROLLBAR ——— */
+.sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* ——— MOBILE ——— */
+@media (max-width: 767px) {
+    .main-header .navbar {
+        margin-left: 0 !important;
+    }
+    .skin-blue .main-header .navbar,
+    .skin-blue-light .main-header .navbar {
+        background-color: #0c1222 !important;
+        box-shadow: none !important;
+    }
+    .skin-blue .main-header .navbar .sidebar-toggle,
+    .skin-blue-light .main-header .navbar .sidebar-toggle {
+        color: #e2e8f0 !important;
+    }
+    .skin-blue .main-header .navbar .sidebar-toggle:hover,
+    .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+        color: #ffffff !important;
+        background: rgba(255,255,255,0.06) !important;
+    }
+    .skin-blue .main-header .navbar .nav > li > a,
+    .skin-blue-light .main-header .navbar .nav > li > a {
+        color: #e2e8f0 !important;
+    }
+}

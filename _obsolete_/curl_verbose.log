@@ -1,0 +1,27 @@
+* Uses proxy env variable no_proxy == '*.azureedge.net'
+* Host localhost:80 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:80...
+* Established connection to localhost (::1 port 80) from ::1 port 61387 
+* using HTTP/1.x
+> POST /bill_xml_saas/signup/register_store HTTP/1.1
+Host: localhost
+Accept: */*
+Content-Length: 206
+Content-Type: application/x-www-form-urlencoded
+
+* upload completely sent off: 206 bytes
+< HTTP/1.1 303 See Other
+< Date: Wed, 11 Mar 2026 04:40:36 GMT
+< Server: Apache/2.4.62 (Win64) OpenSSL/3.0.18 PHP/8.3.30
+< X-Powered-By: PHP/8.3.29
+< Set-Cookie: v10_session=g2didg9qjhnpreldj6ka8vuff0676gqt; expires=Wed, 11 Mar 2026 06:40:36 GMT; Max-Age=7200; path=/; HttpOnly
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate
+< Pragma: no-cache
+< Location: http://localhost/bill_xml_saas/index.php/login
+< Content-Length: 0
+< Content-Type: text/html; charset=UTF-8
+< 
+* Connection #0 to host localhost:80 left intact

@@ -1,0 +1,6 @@
+﻿ชื่อสินค้า,หมวดหมู่,SKU,HSN,หน่วยนับ,แจ้งเตือนเมื่อต่ำกว่า,ยี่ห้อ,หมายเลข Lot,ราคาต้นทุน,ชื่อภาษี,อัตราภาษี,ประเภทภาษี (Inclusive/Exclusive),ราคาขาย,สต็อกเริ่มต้น,รหัสบาร์ก,คะแนน,รายละเอียดสินค้า,ประเภทส่วนลด (Percentage/Fixed),ส่วนลด,ราคาแนะนำขาย (MRP)
+Item Name 1,Category 1,1111,-,กล่อง,5,Brand 1,11,100,VAT,7,Inclusive,120,10,BARCODE123,10,อธิบายสินค้า,Percentage,-,-
+Item Name 2,Category 2,2222,-,Pc,5,Brand 2,-,90,VAT,7,Exclusive,220,10,BARCODE124,0,Description 2,Fixed,-,-
+Item Name 3,Category 3,3333,-,Pc,5,Brand 3,-,83,VAT,7,Inclusive,320,10,BARCODE125,10,Description 3,Percentage,-,-
+Item Name 4,Category 4,4444,-,Pc,5,Brand 4,-,400,ยกเว้นVAT,0,Exclusive,420,10,BARCODE126,20,Description 4,Fixed,5,-
+Item Name 5,Category 5,5555,-,อัน,5,Brand 5,5,500,NoTax,0,Exclusive,520,10,BARCODE127,30,Description 5,Percentage,10,-
