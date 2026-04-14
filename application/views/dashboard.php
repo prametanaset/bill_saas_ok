@@ -93,7 +93,19 @@
     <div class="row">
     <div class="col-md-12">
       <!-- ********** ALERT MESSAGE START******* -->
-     <?php //include"comman/code_flashdata.php"; ?> 
+     <?php //include"comman/code_flashdata.php"; ?>
+     <?php if(!empty($store_setup_incomplete)): ?>
+       <div class="alert alert-warning" style="border-left: 4px solid #f39c12; margin-top: 10px;">
+         <h4 style="margin-top:0;">
+           <i class="fa fa-exclamation-triangle"></i>
+           <?= $this->lang->line('setup_store_title'); ?>
+         </h4>
+         <p style="margin-bottom: 10px;"><?= $this->lang->line('setup_store_message'); ?></p>
+         <a href="<?= $store_setup_url; ?>" class="btn btn-warning">
+           <i class="fa fa-cog"></i> <?= $this->lang->line('setup_store_cta'); ?>
+         </a>
+       </div>
+     <?php endif; ?>
        <!-- ********** ALERT MESSAGE END******* -->
      </div>
      </div>

@@ -31,6 +31,19 @@ class Dashboard extends MY_Controller {
 			$data['support_list'] = $this->dashboard_model->get_store_support_list();
 			$data['all_stores_list_php'] = $this->dashboard_model->get_all_stores_list();
 		}
+		if(!is_admin()){
+			$store = get_store_details();
+			$data['store_setup_incomplete'] = (
+				empty(trim((string)$store->store_name)) ||
+				empty(trim((string)$store->phone)) ||
+				empty(trim((string)$store->address)) ||
+				empty(trim((string)$store->gst_no))
+			);
+			$data['store_setup_url'] = base_url('store_profile/update/'.get_current_store_id());
+		} else {
+			$data['store_setup_incomplete'] = false;
+			$data['store_setup_url'] = '';
+		}
 		$data['page_title']=$this->lang->line('dashboard');
 		if(isset($_POST['store_id'])){
 			$data['store_id'] =$_POST['store_id'];

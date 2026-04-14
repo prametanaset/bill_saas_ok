@@ -36,11 +36,12 @@
  <?php
 
     if(!isset($purchase_id)){
-      $supplier_id  = $pur_date = $purchase_status = $warehouse_id =
+      $supplier_id  = $pur_date = $warehouse_id =
       $reference_no  =
       $other_charges_input          = $other_charges_tax_id =
       $discount_input = $discount_type  = $purchase_note=$store_id='';
       $pur_date=show_date(date("d-m-Y"));
+      $purchase_status='Ordered';
     }
     else{
       $q2 = $this->db->query("select * from db_purchase where id=$purchase_id");

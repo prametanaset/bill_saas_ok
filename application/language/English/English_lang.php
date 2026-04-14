@@ -1,5 +1,8 @@
 <?php
 
+$lang['setup_store_title']				=		'System Setup Required';
+$lang['setup_store_message']			=		'Before using the system, please complete your store information (name, phone, address, tax ID).';
+$lang['setup_store_cta']				=		'Configure Store Info';
 $lang['dashboard']						=		'Dashboard';
 $lang['sales']							=		'Sales';
 $lang['sales_2']							=	'Sales';
